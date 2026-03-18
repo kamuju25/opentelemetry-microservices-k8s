@@ -15,7 +15,7 @@ https://opentelemetry.io/docs/demo/services/
 
 ## Concepts covered
 
-  - Cloud Infrastructure Setup – Learn how to set up and configure cloud environments for DevOps workflows.
+  - *Cloud Infrastructure Setup* – Learn how to set up and configure cloud environments for DevOps workflows.
   - Project Understanding & SDLC – Gain a clear understanding of software development life cycles within microservices-based systems.
   - Containerization with Docker – Learn how to package, deploy, and manage applications using Docker.
   - Docker Compose Setup – Understand how to run and manage multi-container applications using Docker Compose.

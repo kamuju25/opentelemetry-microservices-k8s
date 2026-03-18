@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Setting up an AWS account is your first step into the world of cloud computing.
+Setting up an AWS account is your first step into cloud computing. Below is a step-by-step guide to help you create your AWS account and begin using it.
 
 ## Step-by-Step AWS Account Setup
 
-`Step 1: Open the AWS Registration Page`
+### Step 1: Open the AWS Registration Page
 
   - Navigate to the AWS sign-up website [AWS-Sign-up](https://aws.amazon.com/) 
   - Click on Create an AWS Account  

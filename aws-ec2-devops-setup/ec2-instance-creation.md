@@ -1,4 +1,4 @@
-# AWS EC2 Instance Setup Guide for Beginners
+# AWS EC2 Instance Setup
 ## Introduction
 
 Amazon EC2 (Elastic Compute Cloud) allows you to run scalable virtual servers in the cloud.

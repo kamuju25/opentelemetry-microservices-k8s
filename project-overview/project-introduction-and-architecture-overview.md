@@ -2,6 +2,17 @@
 
 The project is built using a multi-microservice architecture, where each service is developed using different programming languages.
 
+Comprehensive documentation, including the project architecture diagram and overview of microservices used, is available at the link below
+
+
+<img width="1225" height="988" alt="opentelemetry" src="https://github.com/user-attachments/assets/7b3f8ea6-bcac-420f-96cb-07ff4561c22e" />
+
+
+```bash
+https://opentelemetry.io/docs/demo/architecture/
+https://opentelemetry.io/docs/demo/services/
+```
+
 ## Concepts covered
 
   - Cloud Infrastructure Setup – Learn how to set up and configure cloud environments for DevOps workflows.

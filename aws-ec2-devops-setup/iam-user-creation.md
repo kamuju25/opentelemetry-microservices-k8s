@@ -4,7 +4,7 @@
 
 **Step 1: Sign in to AWS Console**
 
-  - Go to the AWS Management Console
+  - Go to the AWS Management Console [AWS-Console](https://console.aws.amazon.com/)
   - Log in using your Root Account
   - Navigate to the IAM Dashboard
 
@@ -15,7 +15,7 @@
 
 **Step 3: Enter User Information**
 
-  - Provide a User Name (for example: devops-user)
+  - Provide a User Name (for example: opentelemetry-user)
   - Choose the AWS Credential Type:
   - Access Key (Programmatic Access): for CLI, SDKs, and API usage
   - Password (Console Access): for AWS Management Console login

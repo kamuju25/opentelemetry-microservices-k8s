@@ -28,3 +28,15 @@ COPY --from=builder /usr/src/app/product-catalog/ ./
 ENV PRODUCT_CATALOG_PORT 8088
 
 ENTRYPOINT [ "./product-catalog" ]
+```
+Now build the image
+
+```bash
+docker build -t naveen/product-catalog:v1 .
+```
+
+Now run the image
+
+```bash
+docker run naveen/product-catalog:v1
+```

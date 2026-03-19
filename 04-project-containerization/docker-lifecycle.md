@@ -9,7 +9,6 @@ A Dockerfile is a plain text file that contains a sequence of instructions used 
   2. **Building the Docker Image**
 
 The Docker image is generated from the Dockerfile using the docker build command. A Docker image is a lightweight, portable, and executable package that includes everything required to run an application, such as the runtime, libraries, system tools, and application code.
-(Correction: Images are not just “standalone,” they are also read-only templates used to create containers.)
 
   3. **Running the Docker Container**
 

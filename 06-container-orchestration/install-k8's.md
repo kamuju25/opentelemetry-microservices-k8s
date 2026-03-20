@@ -43,7 +43,7 @@ This is the most commonly used approach because:
   - Integrated UI and monitoring
   - Better cost optimization
 
-Why Choose Managed Kubernetes?
+## Why Choose Managed Kubernetes?
 
 Managed Kubernetes is preferred because it reduces operational overhead. Instead of managing the cluster, we can focus on deploying and scaling applications while the cloud provider handles infrastructure, upgrades, and availability.
 

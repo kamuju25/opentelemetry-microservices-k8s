@@ -47,7 +47,7 @@ This is the most commonly used approach because:
 
 Managed Kubernetes is preferred because it reduces operational overhead. Instead of managing the cluster, we can focus on deploying and scaling applications while the cloud provider handles infrastructure, upgrades, and availability.
 
-Kubernetes clusters can be created manually or by using automation tools like Terraform.
+Kubernetes clusters can be created manually or by using automation tools like **Terraform**.
 
 Terraform helps us:
 

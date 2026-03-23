@@ -50,7 +50,7 @@ The remote backend configuration can be placed either in the main.tf file or in 
 
 ## Terraform state file locking
 
-Even when using a remote backend (S3), multiple team members can still run `terraform apply` at the same time. This creates a `race condition`, where both users try to update the same infrastructure simultaneously, causing conflicts. State locking solves this by locking the state file when one person runs Terraform. While locked, others must wait. On AWS, this locking is commonly implemented using DynamoDB, ensuring only one Terraform execution runs at a time.
+Even when using a remote backend (S3), multiple team members can still run `terraform apply` at the same time. This creates a `race condition`, where both users try to update the same infrastructure simultaneously, causing conflicts. State locking solves this by locking the state file when one person runs Terraform. While locked, others must wait. On AWS, this locking is commonly implemented using `DynamoDB`, ensuring only one Terraform execution runs at a time.
 
 ### If a race condition occurs, you face three primary risks:
 

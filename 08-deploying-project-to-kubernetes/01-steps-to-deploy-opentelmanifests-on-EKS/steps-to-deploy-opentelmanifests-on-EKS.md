@@ -301,3 +301,38 @@ aws iam create-policy-version \
     --policy-document file://policy.json \
     --set-as-default
 ```
+
+## Ingress.yaml to access the website
+
+Now, to use Ingress, first change the service type to NodePort in the frontend proxy microservice `service.yaml`. Then, create an Ingress resource (ingress.yaml) for the frontend proxy service.
+
+```bash
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend-proxy
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+spec:
+  ingressClassName: alb
+  rules:
+    - host: example.com
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: opentelemetry-demo-frontendproxy
+                port:
+                  number: 8080
+```
+
+Host-based routing is configured using a dummy domain example.com, which is added in the Ingress host field. The Ingress forwards traffic to the frontend proxy service on port 8080.  
+
+Annotations are added to configure the AWS ALB load balancer (internet-facing and target-type IP). The Ingress class name (alb) is specified so that the ALB controller reads the Ingress resource.  
+
+The configuration is then applied using kubectl apply -f ingress.yaml, which creates a load balancer. After provisioning, example.com is added to the local hosts file (/etc/hosts) and mapped to the load balancer IP.  
+
+Finally, accessing example.com opens the frontend proxy through the Ingress.

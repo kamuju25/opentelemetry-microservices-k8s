@@ -2,6 +2,9 @@
 
 GitHub Actions is a CI orchestrator provided by GitHub. If your source code is stored in a GitHub repository, you can create CI workflows directly inside that repository.
 
+In CI, steps include: unit testing, build, static code analysis, Docker image creation, pushing image, and updating Kubernetes manifests.
+After CI updates Kubernetes manifests, CD picks those updates and deploys them to the Kubernetes cluster.
+
 In simpler terms, GitHub Actions is a CI tool provided by GitHub. We create a .github/workflows folder and add a YAML file that defines the workflow name, trigger, jobs, and steps.
 Each job runs on a GitHub runner and performs tasks like checkout, build, test, and Docker image creation. This automates the CI process.
 
@@ -23,6 +26,8 @@ GitHub provides pre-built actions that work like plugins. For example:
   - Setup language actions → install Go, Java, Node, etc.
 
 So, in the YAML file, you mainly use GitHub Actions instead of writing custom scripts. That’s why it is called GitHub Actions.
+
+This is the github actions YAML file product catalog microservice.
 
 ```bash
 # CI for Product Catalog Service
@@ -127,3 +132,24 @@ jobs:
             git commit -m "[CI]: Update product catalog image tag"
             git push origin HEAD:main -f
 ```
+
+After this, make the required changes to the repository and push them to the SCM. This will trigger the CI pipeline as defined in the product-catalog.yaml file.
+
+## GitOps
+
+GitOps stores Kubernetes manifests in a version control system (usually Git). A CD tool (like Argo CD) monitors the repo and deploys changes automatically.
+Git (version control) becomes the source of truth for deployments.
+
+Advantages of GitOps
+
+  - Automatic deployment when repo changes are detected
+  - Reconciliation — if someone manually changes the cluster, GitOps resets it back to Git state
+  - Continuous sync — runs every few minutes automatically
+  - Version-controlled deployments with traceability
+
+## Install and Configure Argo CD
+
+Install and configure Argo CD in the EKS cluster.
+You can follow the official documentation:
+
+https://argo-cd.readthedocs.io/en/stable/

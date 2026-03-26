@@ -31,10 +31,10 @@ Finally, run the executable:
 ```bash
 ./product-catalog
 ```
-You should see output like this as mentioned in the `README.md` file of product-catalog microservice in src folder, which indicates the microservice is running successfully:
+You should see output like this as mentioned in the `README.md` file of product-catalog microservice in src folder, which indicates the microservice is running successfully:  
 
-INFO[0000] Loaded 10 products
-INFO[0000] Product Catalog gRPC server started on port: 8088
+INFO[0000] Loaded 10 products  
+INFO[0000] Product Catalog gRPC server started on port: 8088  
 
 
 ## Containerization of product catalog service

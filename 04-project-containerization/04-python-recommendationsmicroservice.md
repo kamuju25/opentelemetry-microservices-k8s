@@ -19,10 +19,17 @@ ENTRYPOINT ["python", "recommendation_server.py"]
 Now build the image
 
 ```bash
-docker build -t naveen/recommendationservice:v1 .
+docker build -t <imagename=kamuju25/recommendation:v1> .
 ```
 Now run the image
 
 ```bash
-docker run naveen/recommendationservice:v1
+docker run <imagename=kamuju25/recommendation:v1>
+```
+
+To push to Docker hub
+
+```bash
+docker login -u <username>
+docker push <imagename=kamuju25/recommendation:v1>
 ```

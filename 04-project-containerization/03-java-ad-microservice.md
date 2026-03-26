@@ -33,10 +33,10 @@ ENTRYPOINT ["./build/install/opentelemetry-demo-ad/bin/Ad"]
 Now build the image
 
 ```bash
-docker build -t naveen/adservice:v1 .
+docker build -t kamuju25/adservice:v1 .
 ```
 Now run the image
 
 ```bash
-docker run naveen/adservice:v1
+docker run kamuju25/adservice:v1
 ```

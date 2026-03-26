@@ -71,11 +71,18 @@ ENTRYPOINT [ "./product-catalog" ]
 Now build the image
 
 ```bash
-docker build -t naveen/product-catalog:v1 .
+docker build -t <imagename=kamuju25/product-catalog:v1> .
 ```
 
 Now run the image
 
 ```bash
-docker run naveen/product-catalog:v1
+docker run <imagename=kamuju25/product-catalog:v1>
+```
+
+To push to Docker hub
+
+```bash
+docker login -u <username>
+docker push <imagename=kamuju25/product-catalog:v1>
 ```

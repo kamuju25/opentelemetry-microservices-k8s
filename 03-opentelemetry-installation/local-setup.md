@@ -29,8 +29,10 @@ Run the Docker Compose file:
 docker compose up
 ```
 
-# IMAGES.........................................
+<img width="1902" height="553" alt="image" src="https://github.com/user-attachments/assets/4ee974b2-b6ff-4546-aa42-6eaf8f9ef806" />
+
 
 As mentioned in the OpenTelemetry Docker Deployment documentation [open telemetry](https://opentelemetry.io/docs/demo/docker-deployment/), to access the application in a browser, port 8080 needs to be opened. Therefore, you must open port 8080 for the EC2 instance by updating its security group settings, as all ports are blocked by default for an EC2 instance.
 
-# IMAGES.........................................
+<img width="1899" height="961" alt="image" src="https://github.com/user-attachments/assets/8a242979-7f94-4cd5-9783-9e88d4b90bb6" />
+

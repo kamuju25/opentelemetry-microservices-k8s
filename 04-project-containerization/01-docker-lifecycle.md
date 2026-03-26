@@ -13,3 +13,9 @@ The Docker image is generated from the Dockerfile using the docker build command
   3. **Running the Docker Container**
 
 After the image is built, a container can be created and started using the docker run command. A container is an isolated runtime instance of a Docker image where the application executes. Containers provide consistency across environments while remaining lightweight and quick to start.
+
+### As shown in the architecture diagram https://opentelemetry.io/docs/demo/architecture/, the OpenTelemetry (OTEL) applications are developed in various languages. We will focus on three specific microservices, which we will containerize; the rest can be implemented using the same approach - 
+
+  - Product Catalog (Go)
+  - Ad (Java)
+  - Recommendation (Python)

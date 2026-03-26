@@ -36,3 +36,19 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 ```bash
 sudo docker run hello-world
 ```
+
+If you run docker run hello-world without sudo, you may get the following error **unable to get image 'ghcr.io/open-telemetry/opentelemetry-collector-releases/opentelemetry-collector-contrib:0.133.0': permission denied while trying to connect to the Docker API at unix:///var/run/docker.sock** 
+
+To avoid using sudo every time, add the ubuntu user to the docker group:
+
+```bash
+sudo usermod -aG docker ubuntu
+```
+
+Then restart Docker or log out and log back in for the changes to take effect:
+
+```bash
+sudo systemctl restart docker
+```
+
+

@@ -45,10 +45,4 @@ To avoid using sudo every time, add the ubuntu user to the docker group:
 sudo usermod -aG docker ubuntu
 ```
 
-Then restart Docker or log out and log back in for the changes to take effect:
-
-```bash
-sudo systemctl restart docker
-```
-
-
+Then restart Docker service or log out and log back in for the changes to take effect.

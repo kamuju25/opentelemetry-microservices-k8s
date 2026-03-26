@@ -21,9 +21,3 @@ https://opentelemetry.io/docs/demo/services/
   - **Docker Compose Setup** – Understand how to run and manage multi-container applications using Docker Compose.
   - **Kubernetes Orchestration** – Learn how to deploy, scale, and manage containerized applications using Kubernetes.
   - **Infrastructure as Code (IaC) with Terraform** – Automate infrastructure provisioning and management using Terraform.
-
-### As shown in the architecture diagram, the OpenTelemetry (OTEL) applications are developed in various languages. We will focus on three specific microservices, which we will containerize; the rest can be implemented using the same approach - 
-
-  - Product Catalog (Go)
-  - Ad (Java)
-  - Recommendation (Python).

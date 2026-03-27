@@ -1,5 +1,5 @@
 output "s3_bucket_name" {
-  value       = aws_s3_bucket.terraform_state.id
+  value       = opentel-terraform-state-eks-bucket.id
   description = "The name of the S3 bucket"
 }
 

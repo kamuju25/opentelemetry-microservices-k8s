@@ -36,7 +36,7 @@ Run:
 Terraform will:
 
   - NOT create new bucket
-  - Only enable versioning
+  - Only enable's versioning
   - Update state file
 
 ## Terraform state file management

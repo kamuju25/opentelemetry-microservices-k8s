@@ -8,7 +8,7 @@ Earlier, people created AWS resources (like EC2, VPC) manually using the UI. Thi
 **Example:**
 
   1. Creating one VPC manually → approx. 1 hour  
-     100 requests → 100 hours wasted  
+  2. 100 requests → 100 hours wasted  
 
 ## What is Infrastructure as Code?
 

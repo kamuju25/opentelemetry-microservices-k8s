@@ -7,8 +7,9 @@ If you delete a resource from your code, Terraform removes it in AWS and also de
 
 ## Example
 
+`main.tf` to create an S3 bucket
+
 ```bash
-main.tf to create an S3 bucket:
 resource "aws_s3_bucket" "demo" {
   bucket = "my-demo-bucket"
 }

@@ -1,10 +1,16 @@
 ## Connect to EKS cluster
 
 To access an EKS cluster from an EC2 instance using kubectl, kubectl depends on a kubeconfig file, which stores information about clusters, users, and contexts. By default, kubectl does not know which cluster to connect to, so commands like   
-`kubectl get nodes`  
-will return nothing. The kubeconfig file can contain multiple clusters, and a context determines which cluster kubectl is currently connected to. You can view this configuration using `kubectl config view`   
-check the active context with `kubectl config current-context`, and switch contexts using `kubectl config use-context`. 
-To connect EC2 instance to an EKS cluster, it is required to install the AWS CLI (along with unzip), then run `aws configure` and provide your IAM user credentials. After configuration, use the command `aws eks update-kubeconfig --name <cluster-name> --region <region>`  
+`kubectl get nodes`
+
+will return nothing. The kubeconfig file can contain multiple clusters, and a context determines which cluster kubectl is currently connected to. You can view this configuration using `kubectl config view`
+
+check the active context with `kubectl config current-context`, and switch contexts using `kubectl config use-context <clustername>`
+
+To connect EC2 instance to an EKS cluster, it is required to install the AWS CLI (along with unzip), then run `aws configure` and provide your IAM user credentials. After configuration, use the command   
+
+`aws eks update-kubeconfig --name <cluster-name> --region <region>`  
+
 to automatically add the EKS cluster details to the kubeconfig file and set the context. Once this is done, running kubectl get nodes will show the nodes of your EKS cluster, confirming that your EC2 instance is successfully connected.
 
 ## Deploying OpenTelemetry Project on the EKS Cluster

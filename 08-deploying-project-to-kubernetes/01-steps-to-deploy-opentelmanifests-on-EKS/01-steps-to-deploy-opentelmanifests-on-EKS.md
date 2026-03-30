@@ -97,8 +97,7 @@ Now the application is accessible externally, and the OpenTelemetry project is s
 ## Disadvantages of LoadBalancer service type
 
   1. Not declarative
-       - You cannot configure HTTPS, certificates, routing, or health checks in YAML. 
-         Changes must be done manually in the cloud console.
+       - You cannot configure HTTPS, certificates, routing, or health checks in YAML, changes must be done manually in the cloud console.
   
   2. Not cost-effective
        - Each service creates a separate load balancer.

@@ -4,7 +4,9 @@ Terraform needs permission to talk to AWS before it can create any resources. To
 
 First, log in to your AWS account using an IAM user (recommended) or root user.
 Go to Security Credentials and create Access Keys for CLI usage.
-# image
+
+<img width="927" height="740" alt="image" src="https://github.com/user-attachments/assets/ea1c6681-56ff-4621-8181-1dc0c0c23283" />
+
 Scroll down to Accesskeys section and click on Create access key and select use case `Command Line Interface (CLI)
 
 Save these keys safely because they are very sensitive.

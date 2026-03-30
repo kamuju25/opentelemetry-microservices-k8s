@@ -1,3 +1,5 @@
+On the instance, you have to install aws cli and and configure aws credentials and then connect to the kubernetes cluster
+
 # Deploying OpenTelemetry Project on the EKS Cluster
 
 First, go back to your EC2 instance and perform some quick checks. Verify that you are connected to the correct cluster (Minikube, EKS, or any other). This command helps confirm the current cluster.

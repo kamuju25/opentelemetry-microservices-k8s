@@ -107,13 +107,11 @@ Now the application is accessible externally, and the OpenTelemetry project is s
        - Tied to cloud provider load balancer (e.g., AWS ALB).
           Cannot easily use NGINX, F5, Traefik, or Envoy.
          
-  4. Depends on Cloud Controller Manager (CCM)
+  4. Depends on Cloud Controller Manager (CCM)  
+    - Won’t work in environments without CCM (e.g., Minikube).  
 
-    - Won’t work in environments without CCM (e.g., Minikube).
-
-  5. Limited configuration control
-
-    - Cannot define advanced load balancer settings like routing rules, TLS, algorithms, etc.
+  5. Limited configuration control  
+    - Cannot define advanced load balancer settings like routing rules, TLS, algorithms, etc.  
 
 ## Ingress and Ingress Controllers
 

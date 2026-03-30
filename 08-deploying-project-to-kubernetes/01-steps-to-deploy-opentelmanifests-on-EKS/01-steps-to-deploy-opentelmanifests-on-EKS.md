@@ -1,33 +1,13 @@
-On the instance, you have to install aws cli and and configure aws credentials and then connect to the kubernetes cluster
+## Connect to EKS cluster
 
-Terraform needs permission to talk to AWS before it can create any resources. To give permission, you must provide your AWS credentials (Access Key and Secret Key).
+To access an EKS cluster from an EC2 instance using kubectl, kubectl depends on a kubeconfig file, which stores information about clusters, users, and contexts. By default, kubectl does not know which cluster to connect to, so commands like 
+`kubectl get nodes` 
+will return nothing. The kubeconfig file can contain multiple clusters, and a context determines which cluster kubectl is currently connected to. You can view this configuration using `kubectl config view`, 
+check the active context with `kubectl config current-context`, and switch contexts using `kubectl config use-context`. 
+To connect EC2 instance to an EKS cluster, it is required to install the AWS CLI (along with unzip), then run `aws configure` and provide your IAM user credentials. After configuration, use the command `aws eks update-kubeconfig --name <cluster-name> --region <region>`
+to automatically add the EKS cluster details to the kubeconfig file and set the context. Once this is done, running kubectl get nodes will show the nodes of your EKS cluster, confirming that your EC2 instance is successfully connected.
 
-First, log in to your AWS account using an IAM user (recommended) or root user.
-Go to Security Credentials and create Access Keys for CLI usage.
-
-<img width="927" height="740" alt="image" src="https://github.com/user-attachments/assets/ea1c6681-56ff-4621-8181-1dc0c0c23283" />
-
-Scroll down to Accesskeys section and click on Create access key and select use case `Command Line Interface (CLI)
-
-Save these keys safely because they are very sensitive.
-
-Next, install the AWS CLI on the AWS linux machine where the opentel projected is cloned.
-
-After installation, run the command `aws configure`.
-
-Enter your:
-
-Access Key
-Secret Key
-Region (like us-east-1)
-Once configured, AWS CLI creates a hidden folder called .aws on your system.
-
-Inside this folder, there is a credentials file that stores your keys.
-
-Terraform automatically reads this credentials file.
-
-
-# Deploying OpenTelemetry Project on the EKS Cluster
+## Deploying OpenTelemetry Project on the EKS Cluster
 
 First, go back to your EC2 instance and perform some quick checks. Verify that you are connected to the correct cluster (Minikube, EKS, or any other). This command helps confirm the current cluster.
 

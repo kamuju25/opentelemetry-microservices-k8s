@@ -283,36 +283,6 @@ To check logs -
 ```bash
 kubectl logs <name-of-the-pod> -n kube-system
 ```
-## Run the following command to retrieve the policy details and look for **elasticloadbalancing:DescribeListenerAttributes** in the policy document.
-```
-aws iam get-policy-version \
-    --policy-arn arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy \
-    --version-id $(aws iam get-policy --policy-arn arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy --query 'Policy.DefaultVersionId' --output text)
-```
-
-If the required permission is missing, update the policy to include it
-## Download the current policy
-```
-aws iam get-policy-version \
-    --policy-arn arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy \
-    --version-id $(aws iam get-policy --policy-arn arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy --query 'Policy.DefaultVersionId' --output text) \
-    --query 'PolicyVersion.Document' --output json > policy.json
-```
-## Edit policy.json to add the missing permissions
-```
-{
-  "Effect": "Allow",
-  "Action": "elasticloadbalancing:DescribeListenerAttributes",
-  "Resource": "*"
-}
-```
-## Create a new policy version
-```
-aws iam create-policy-version \
-    --policy-arn arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy \
-    --policy-document file://policy.json \
-    --set-as-default
-```
 
 ## Ingress.yaml to access the website
 
@@ -329,7 +299,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: example.com
+    - host: naveen-opentel-demo.com
       http:
         paths:
           - path: "/"
@@ -341,10 +311,21 @@ spec:
                   number: 8080
 ```
 
-Host-based routing is configured using a dummy domain example.com, which is added in the Ingress host field. The Ingress forwards traffic to the frontend proxy service on port 8080.  
+Host-based routing is configured using a dummy domain `naveen-opentel-demo.com`, which is added in the Ingress host field. The Ingress forwards traffic to the frontend proxy service on port 8080.  
 
 Annotations are added to configure the AWS ALB load balancer (internet-facing and target-type IP). The Ingress class name (alb) is specified so that the ALB controller reads the Ingress resource.  
 
-The configuration is then applied using kubectl apply -f ingress.yaml, which creates a load balancer. After provisioning, example.com is added to the local hosts file (/etc/hosts) and mapped to the load balancer IP.  
+The configuration is then applied using `kubectl apply -f ingress.yaml`, which creates a load balancer. After provisioning, `naveen-opentel-demo.com` is added to the local hosts file (/etc/hosts) and mapped to the load balancer IP, you can use nslookup <loadbalancerDNS-name> to get the IP of load balancer.
 
-Finally, accessing example.com opens the frontend proxy through the Ingress.
+## For Windows system to update /etc/hosts file
+
+  - Search for Notepad in the Windows search bar
+  - Right-click → Run as administrator
+  - In Notepad → File → Open
+  - Go to: C:\Windows\System32\drivers\etc\
+  - Change bottom dropdown: Text Documents (*.txt)  →  All Files (*.*)
+  - Select hosts  → Add - <loadbalancerip>  naveen-opentel-demo.com
+  - Press Ctrl + S
+  - Flush DNS: ipconfig /flushdns
+
+Finally, accessing naveen-opentel-demo.com opens the frontend proxy through the Ingress.

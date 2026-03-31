@@ -94,6 +94,8 @@ Copy the DNS name and access it using port 8080:
 ```
 Now the application is accessible externally, and the OpenTelemetry project is successfully deployed.
 
+<img width="1833" height="976" alt="image" src="https://github.com/user-attachments/assets/f3175f19-f22a-4aa8-8471-f72c61791e3c" />
+
 ## Disadvantages of LoadBalancer service type
 
   1. Not declarative

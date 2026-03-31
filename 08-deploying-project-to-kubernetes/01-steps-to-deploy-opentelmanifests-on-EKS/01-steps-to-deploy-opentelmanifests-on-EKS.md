@@ -210,10 +210,9 @@ export cluster_name=<your-cluster-name>
 When you run aws eks describe-cluster for a cluster, it returns an OIDC ID. Use the command below to save the OIDC ID in the oidc_id variable
 
 ```
-oidc_id=$(aws eks describe-cluster --name $cluster-name --query "cluster.identity.oidc.issuer" --output text | cut -d '/' -f 5) 
-```
-
+oidc_id=$(aws eks describe-cluster --name $cluster-name --query "cluster.identity.oidc.issuer" --output text | cut -d '/' -f 5)
 echo $oidc_id
+```
 
 Now, we will associate IAM oidc provider with the cluster, so it is basically adding IAM oidc provider to the cluster - 
 

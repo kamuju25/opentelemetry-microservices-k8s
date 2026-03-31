@@ -1,6 +1,6 @@
 # Custom-Domain-Configuration
 
-  - Previously, the application was accessed using Kubernetes Ingress with a dummy domain (example.com).
+  - Previously, the application was accessed using Kubernetes Ingress with a dummy domain (naveen-opentel-demo.com).
   - To use a custom domain, first, purchase a domain from providers like GoDaddy or Hostinger.
   - After purchasing, connect the domain to the AWS load balancer created by the Ingress controller.
   - Use AWS Route 53 for DNS management.
@@ -11,7 +11,7 @@
 
 # Configuration update in ingress.yaml
 
-  - Update the Ingress resource by replacing example.com with the custom domain.
+  - Update the Ingress resource by replacing `naveen-opentel-demo.com` with the custom domain.
   - Apply the changes using `kubectl apply -f ingress.yaml`.
   - The Ingress controller updates the load balancer rules with the new domain.
   - DNS propagation takes time (few minutes to up to 48 hours).

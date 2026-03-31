@@ -217,7 +217,7 @@ echo $oidc_id
 Now, we will associate IAM oidc provider with the cluster, so it is basically adding IAM oidc provider to the cluster - 
 
 ```
-eksctl utils associate-iam-oidc-provider --cluster $cluster-name --approve
+eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve
 ```
 
 ## Download IAM policy

@@ -329,3 +329,6 @@ The configuration is then applied using `kubectl apply -f ingress.yaml`, which c
   - Flush DNS: ipconfig /flushdns
 
 Finally, accessing naveen-opentel-demo.com opens the frontend proxy through the Ingress.
+
+<img width="1810" height="969" alt="Screenshot 2026-03-31 125051" src="https://github.com/user-attachments/assets/8f2fe64f-74f0-4687-909b-e8f57f25523b" />
+

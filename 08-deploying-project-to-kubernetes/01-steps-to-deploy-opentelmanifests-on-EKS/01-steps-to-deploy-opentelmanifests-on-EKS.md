@@ -103,9 +103,8 @@ Now the application is accessible externally, and the OpenTelemetry project is s
   2. Not cost-effective -->Each service creates a separate load balancer.  
       Multiple services = multiple expensive load balancers.  
 
-  3. Lack of flexibility
-     - Tied to cloud provider load balancer (e.g., AWS ALB).
-       Cannot easily use NGINX, F5, Traefik, or Envoy.
+  3. Lack of flexibility  --> Tied to cloud provider load balancer (e.g., AWS ALB).  
+       Cannot easily use NGINX, F5, Traefik, or Envoy.  
          
   4. Depends on Cloud Controller Manager (CCM)  
     - Won’t work in environments without CCM (e.g., Minikube).  

@@ -1,4 +1,4 @@
-**CI/CD** stands for Continuous Integration and Continuous Delivery (or Deployment). It is a DevOps practice used to automate building, testing, and deploying applications.
+**CI/CD** stands for Continuous Integration and Continuous Delivery (or Deployment), It is a DevOps practice used to automate building, testing, and deploying applications.
 
 ## Continuous Integration (CI)
 

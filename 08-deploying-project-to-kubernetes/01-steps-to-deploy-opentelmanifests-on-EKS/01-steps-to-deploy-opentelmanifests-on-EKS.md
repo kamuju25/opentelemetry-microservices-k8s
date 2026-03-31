@@ -280,8 +280,9 @@ kubectl get pods -n kube-system
 ```
 To check logs -
 
+```bash
 kubectl logs <name-of-the-pod> -n kube-system
-
+```
 ## Run the following command to retrieve the policy details and look for **elasticloadbalancing:DescribeListenerAttributes** in the policy document.
 ```
 aws iam get-policy-version \

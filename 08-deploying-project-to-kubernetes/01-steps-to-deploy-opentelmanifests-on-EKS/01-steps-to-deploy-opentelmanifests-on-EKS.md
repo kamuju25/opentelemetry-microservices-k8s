@@ -276,9 +276,11 @@ Verify that the deployments are running.
 
 ```
 kubectl get deployment -n kube-system aws-load-balancer-controller
+kubectl get pods -n kube-system
 ```
+To check logs -
 
-You might face the issue, unable to see the loadbalancer address while giving k get ing -n robot-shop at the end. To avoid this your **AWSLoadBalancerControllerIAMPolicy** should have the required permissions for elasticloadbalancing:DescribeListenerAttributes.
+kubectl logs <name-of-the-pod> -n kube-system
 
 ## Run the following command to retrieve the policy details and look for **elasticloadbalancing:DescribeListenerAttributes** in the policy document.
 ```

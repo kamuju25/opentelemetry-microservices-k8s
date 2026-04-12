@@ -7,7 +7,7 @@ Terraform needs permission to talk to AWS before it can create any resources. To
 
   - Scroll down to `Accesskeys` section and click on `Create access key` and select use case `Command Line Interface (CLI)  
   - Save these keys safely because they are very sensitive.
-  - Next, install the `AWS CLI` on your local machine.
+  - Next, install the `AWS CLI` [awscli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)on your local machine 
   - After installation, run the command `aws configure`.
 
     Enter your:

@@ -4,10 +4,10 @@ GitOps stores Kubernetes manifests in a version control system (usually Git). A 
 
 ### Advantages of GitOps
 
-Automatic deployment when repo changes are detected
-Reconciliation — if someone manually changes the cluster, GitOps resets it back to Git state
-Continuous sync — runs every few minutes automatically
-Version-controlled deployments with traceability
+  - Automatic deployment when repo changes are detected
+  - Reconciliation — if someone manually changes the cluster, GitOps resets it back to Git state
+  - Continuous sync — runs every few minutes automatically
+  - Version-controlled deployments with traceability
 
 ## Install and Configure Argo CD
 You can follow the official documentation: https://argo-cd.readthedocs.io/en/stable/  

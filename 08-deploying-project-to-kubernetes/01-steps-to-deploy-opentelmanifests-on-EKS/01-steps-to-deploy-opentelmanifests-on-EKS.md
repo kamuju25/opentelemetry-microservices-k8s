@@ -1,11 +1,7 @@
 ## Connect to EKS cluster
 
 To access an EKS cluster from an EC2 instance using kubectl, kubectl depends on a kubeconfig file, which stores information about clusters, users, and contexts. By default, kubectl does not know which cluster to connect to, so commands like   
-`kubectl get nodes`
-
-will return nothing. The kubeconfig file can contain multiple clusters, and a context determines which cluster kubectl is currently connected to. You can view this configuration using `kubectl config view`
-
-check the active context with `kubectl config current-context`, and switch contexts using `kubectl config use-context <clustername>`
+`kubectl get nodes`will return nothing. The kubeconfig file can contain multiple clusters, and a context determines which cluster kubectl is currently connected to. You can view this configuration using `kubectl config view`. You can check the active context with `kubectl config current-context`, and switch contexts using `kubectl config use-context <clustername>`.  
 
 To connect EC2 instance to an EKS cluster, it is required to install the AWS CLI (along with unzip), then run `aws configure` and provide your IAM user credentials. After configuration, use the command   
 

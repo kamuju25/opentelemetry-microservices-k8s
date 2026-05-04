@@ -95,8 +95,7 @@ spec:
       opentelemetry.io/name: opentelemetry-demo-adservice
   template:
     metadata:
-      labels:
-        
+      labels:     
         opentelemetry.io/name: opentelemetry-demo-adservice
         app.kubernetes.io/instance: opentelemetry-demo
         app.kubernetes.io/component: adservice

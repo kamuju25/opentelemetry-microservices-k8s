@@ -71,8 +71,7 @@ spec:
     - port: 8080
       name: tcp-service
       targetPort: 8080
-  selector:
-    
+  selector:   
     opentelemetry.io/name: opentelemetry-demo-recommendationservice
 ---
 ---

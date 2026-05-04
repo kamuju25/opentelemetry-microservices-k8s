@@ -216,8 +216,7 @@ spec:
       opentelemetry.io/name: opentelemetry-demo-recommendationservice
   template:
     metadata:
-      labels:
-        
+      labels:       
         opentelemetry.io/name: opentelemetry-demo-recommendationservice
         app.kubernetes.io/instance: opentelemetry-demo
         app.kubernetes.io/component: recommendationservice
@@ -228,8 +227,7 @@ spec:
         - name: recommendationservice
           image: 'ghcr.io/open-telemetry/demo:1.12.0-recommendationservice'
           imagePullPolicy: IfNotPresent
-          ports:
-            
+          ports:       
             - containerPort: 8080
               name: service
           env:
@@ -263,4 +261,3 @@ spec:
               memory: 500Mi
           volumeMounts:
       volumes:
----

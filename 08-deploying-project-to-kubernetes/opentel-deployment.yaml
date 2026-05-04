@@ -157,8 +157,7 @@ spec:
       opentelemetry.io/name: opentelemetry-demo-productcatalogservice
   template:
     metadata:
-      labels:
-        
+      labels:      
         opentelemetry.io/name: opentelemetry-demo-productcatalogservice
         app.kubernetes.io/instance: opentelemetry-demo
         app.kubernetes.io/component: productcatalogservice

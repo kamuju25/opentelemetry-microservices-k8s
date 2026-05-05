@@ -1,5 +1,3 @@
-In the same way, the remaining services can also be containerized and pushed to a registry.
-
 In a microservices architecture, running each service manually requires multiple steps, such as:
 
   - Creating Docker networks
